@@ -1,0 +1,54 @@
+<!-- Author: Christopher Anzalone -->
+<!-- Project: sql-system-html-interface -->
+<!-- File: MAIN MENU HTML FILE (sql-system-html-interface.html) -->
+
+<html>
+<head>
+	<title> sql-system-html-interface </title>
+</head>
+
+<body>
+	<div>
+		<h1> MAIN MENU </h1>
+	</div>
+	
+	<p>
+		<a href="/jFunctions.html"
+		>
+		<h3>J Table Functions (Print, Insert, or Delete)</h3></a>
+	</p>
+	
+	<p>
+		<a
+		href="/cgi-bin/wsqlplus.cgi/?script=sqlStatements1.sql"
+		>
+		<h3>SQL Statements 1: Includes alter table statements that 
+			implement enforcement of particular constraints with 
+			check clauses. </h3></a>
+	</p>
+	
+	<p>
+		<a
+		href="/cgi-bin/wsqlplus.cgi/?script=sqlStatements2.sql"
+		>
+		<h3>SQL Statements 2: Contains procedure and trigger creation 
+		(or replacement). A procedure, check_jparis_s10, is created 
+		that invokes a procedure, raise_application_error, if the 
+		following is not true: All paris projects are supplied by 
+		a supplier with status 10. Triggers are created, which are 
+		used to invoke check_jparis_s10 in order to enforce the 
+		aforementioned constraint.</h3></a>
+	</p>
+
+	<p>
+		<a
+		href="/cgi-bin/wsqlplus.cgi/?script=sqlStatements3.sql"
+		>
+		<h3>SQL Statements 3: A view is created, jheavy, which defines
+		itself as the set of project records (j#, jname, city) for 
+		projects that are supplied with parts having weight > 14. 
+		Duplicates are omitted.</h3></a>
+	</p>
+
+</body>
+</html>

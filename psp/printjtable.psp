@@ -1,0 +1,46 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="printjtable" %>
+<%! url varchar(100) :=
+'"/sql-system-html-interface.html"'; %>
+<%! url2 varchar(100) :=
+'"/jFunctions.html"'; %>
+<html>
+	<head>
+		<title> PRINT JOB TABLE </title>
+	</head>
+	
+	<body>
+		<h1> JOB TABLE </h1>
+		<table border="1">
+			<tr>
+				<th> JNUM </th>
+				<th> JNAME </th>
+				<th> CITY </th>
+			</tr>
+			<%
+				for i in (select * from j)
+				loop
+			%>
+				<tr>
+				     <td> <%=i.j#%> </td>
+				     <td> <%=i.jname%> </td>
+				     <td> <%=i.city%> </td>
+				</tr>
+			<%
+				end loop;
+			%>
+		</table>
+		<p>
+			<a href=<%=url2%>>
+			Click here to return to J Table Functions menu.
+			</a>
+		</p>
+		
+		<p>
+			<a href=<%=url%>>
+			Click here to return to Main Menu.
+			</a>
+		</p>
+	</body>
+</html>
+
